@@ -11,7 +11,7 @@ st.markdown("""
     line-height: 0.9;
 }
 .date-font {
-    font-size: 1vw !important;  /* Viewport width percentage */
+    font-size: 2vw !important;  /* Viewport width percentage */
     text-align: center;
     margin-top: 1vh;
     color: #666;
