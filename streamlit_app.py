@@ -1,19 +1,19 @@
 import streamlit as st
 import time
 from datetime import datetime
-
+impoert
 # Custom CSS with percentage-based sizing
 st.markdown("""
 <style>
 .big-font {
-    font-size: 20vw !important;  /* Viewport width percentage */
+    font-size: 15vw !important;  /* Viewport width percentage */
     text-align: center;
     margin-top: 5vh;
     white-space: nowrap;
     line-height: 0.9;
 }
 .date-font {
-    font-size: 3vw !important;  /* Viewport width percentage */
+    font-size: 1vw !important;  /* Viewport width percentage */
     text-align: center;
     margin-top: 2vh;
     color: #666;
