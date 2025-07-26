@@ -1,9 +1,8 @@
 import streamlit as st
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
 
-# Custom CSS with percentage-based sizing
 st.markdown("""
 <style>
 .time-container {
@@ -33,7 +32,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Remove Streamlit UI elements
 st.markdown("""
 <style>
 #MainMenu {visibility: hidden;}
@@ -42,21 +40,18 @@ footer {visibility: hidden;}
 </style>
 """, unsafe_allow_html=True)
 
-# Create a single container
 clock_container = st.empty()
 
-# Hong Kong timezone
 hk_tz = pytz.timezone('Asia/Hong_Kong')
-
+now = datetime.now(hk_tz)
+current_date = now.strftime("%A, %B %d, %Y")
 while True:
-    # Get current time in Hong Kong
     now = datetime.now(hk_tz)
     
-    # Format time and date
     current_time = now.strftime("%H:%M:%S")
-    current_date = now.strftime("%A, %B %d, %Y")
+    if (current_time == "00:00:00"):
+        current_date = now.strftime("%A, %B %d, %Y")
     
-    # Update the display
     clock_container.markdown(
         f"""
         <div class="time-container">
