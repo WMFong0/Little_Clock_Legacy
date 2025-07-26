@@ -2,17 +2,17 @@ import streamlit as st
 import time
 from datetime import datetime
 
-# Custom CSS for full-screen clock
+# Custom CSS with percentage-based sizing
 st.markdown("""
 <style>
-.time-font {
-    font-size: 10rem !important;
+.big-font {
+    font-size: 20vw !important;  /* Viewport width percentage */
     text-align: center;
     margin-top: 5vh;
-    line-height: 1;
+    line-height: 0.9;
 }
 .date-font {
-    font-size: 1.5rem !important;
+    font-size: 3vw !important;  /* Viewport width percentage */
     text-align: center;
     margin-top: 2vh;
     color: #666;
@@ -24,11 +24,12 @@ st.markdown("""
 date_display = st.empty()
 time_display = st.empty()
 
-# Remove Streamlit menu and footer
+# Remove Streamlit UI elements
 st.markdown("""
 <style>
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
+.stApp {padding-top: 0;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -36,17 +37,17 @@ footer {visibility: hidden;}
 while True:
     now = datetime.now()
     
-    # Update date (small header)
+    # Update date
     current_date = now.strftime("%A, %B %d, %Y")
     date_display.markdown(
         f'<p class="date-font">{current_date}</p>',
         unsafe_allow_html=True
     )
     
-    # Update time (main display)
+    # Update time
     current_time = now.strftime("%H:%M:%S")
     time_display.markdown(
-        f'<p class="time-font">{current_time}</p>',
+        f'<p class="big-font">{current_time}</p>',
         unsafe_allow_html=True
     )
     
