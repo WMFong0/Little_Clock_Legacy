@@ -8,6 +8,7 @@ st.markdown("""
 .big-font {
     font-size: 20vw !important;  /* Viewport width percentage */
     text-align: center;
+    white-space: nowrap;
     margin-top: 5vh;
     line-height: 0.9;
 }
