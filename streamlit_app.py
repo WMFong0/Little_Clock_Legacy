@@ -7,7 +7,7 @@ st.markdown("""
 .big-font {
     font-size: 12vw !important;  /* Viewport width percentage */
     text-align: center;
-    margin-top: 8vh;
+    margin-top: 10vh;
     line-height: 0.9;
 }
 .date-font {
