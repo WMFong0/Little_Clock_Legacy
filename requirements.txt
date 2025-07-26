@@ -1,1 +1,2 @@
 streamlit
+IPython==8.4.0
