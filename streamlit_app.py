@@ -70,4 +70,4 @@ while True:
         unsafe_allow_html=True
     )
     
-    time.sleep(0.95)
+    time.sleep(1)
