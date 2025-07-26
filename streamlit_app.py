@@ -13,7 +13,7 @@ st.markdown("""
 .date-font {
     font-size: 1vw !important;  /* Viewport width percentage */
     text-align: center;
-    margin-top: 2vh;
+    margin-top: 1vh;
     color: #666;
 }
 </style>
