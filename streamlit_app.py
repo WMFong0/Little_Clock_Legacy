@@ -8,7 +8,6 @@ st.markdown("""
     font-size: 15vw !important;  /* Viewport width percentage */
     text-align: center;
     margin-top: 5vh;
-    white-space: nowrap;
     line-height: 0.9;
 }
 .date-font {
