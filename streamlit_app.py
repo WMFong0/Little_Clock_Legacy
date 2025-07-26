@@ -6,7 +6,7 @@ from datetime import datetime
 st.markdown("""
 <style>
 .big-font {
-    font-size: 20vw !important;  /* Viewport width percentage */
+    font-size: 18vw !important;  /* Viewport width percentage */
     text-align: center;
     white-space: nowrap;
     margin-top: 5vh;
