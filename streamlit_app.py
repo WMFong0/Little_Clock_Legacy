@@ -1,7 +1,6 @@
 import streamlit as st
 import time
 from datetime import datetime
-impoert
 # Custom CSS with percentage-based sizing
 st.markdown("""
 <style>
