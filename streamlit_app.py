@@ -1,13 +1,21 @@
 import streamlit as st
 import time
-from IPython.display import clear_output
 from datetime import datetime
-import pytz
 
-hong_kong_timezone = pytz.timezone('Asia/Hong_Kong')
+
+# Create placeholders
+time_placeholder = st.empty()
+date_placeholder = st.empty()
 
 while True:
-    now_utc = datetime.now(pytz.utc)
-    now_hong_kong = now_utc.astimezone(hong_kong_timezone)
-    st.title(f"{now_hong_kong.strftime("%Y/%m/%d %I:%M:%S%p %A")}")
+    now = datetime.now()
+    
+    # Update time display
+    current_time = now.strftime("%H:%M:%S")
+    time_placeholder.header(f"Time: {current_time}")
+    
+    # Update date display
+    current_date = now.strftime("%A, %B %d, %Y")
+    date_placeholder.subheader(f"Date: {current_date}")
+    
     time.sleep(1)
