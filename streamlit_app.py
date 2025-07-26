@@ -15,7 +15,6 @@ st.markdown("""
 }
 .big-time {
     font-size: 20vw !important;
-    font-family: monospace;
     line-height: 1;
     white-space: nowrap;
     margin: 0;
