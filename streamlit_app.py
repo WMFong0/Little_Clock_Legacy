@@ -3,7 +3,7 @@ import time
 from datetime import datetime
 import pytz
 
-# Custom CSS styling with scroll prevention
+
 st.markdown("""
 <style>
 html, body {
@@ -44,7 +44,6 @@ html, body {
 </style>
 """, unsafe_allow_html=True)
 
-# Remove all Streamlit UI elements
 st.markdown("""
 <style>
 #MainMenu {visibility: hidden;}
@@ -57,7 +56,6 @@ header {visibility: hidden;}
 clock_container = st.empty()
 hk_tz = pytz.timezone('Asia/Hong_Kong')
 
-# Initialize with current date and time
 now = datetime.now(hk_tz)
 current_time = now.strftime("%H:%M:%S")
 current_date = now.strftime("%A, %B %d, %Y")
@@ -66,7 +64,6 @@ while True:
     now = datetime.now(hk_tz)
     current_time = now.strftime("%H:%M:%S")
     
-    # Update date only at exactly 00:00:00
     if current_time == "00:00:00":
         current_date = now.strftime("%A, %B %d, %Y")
         # Small delay to ensure we don't update multiple times in the same second
