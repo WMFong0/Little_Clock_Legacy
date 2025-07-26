@@ -44,15 +44,6 @@ html, body {
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-<style>
-#MainMenu 
-footer {visibility: hidden;}
-header {visibility: hidden;}
-.stApp {padding: 0 !important; margin: 0 !important;}
-</style>
-""", unsafe_allow_html=True)
-
 clock_container = st.empty()
 hk_tz = pytz.timezone('Asia/Hong_Kong')
 
