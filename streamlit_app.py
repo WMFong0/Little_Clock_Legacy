@@ -66,7 +66,6 @@ while True:
     
     if current_time == "00:00:00":
         current_date = now.strftime("%A, %B %d, %Y")
-        # Small delay to ensure we don't update multiple times in the same second
         time.sleep(1)
     
     clock_container.markdown(
