@@ -6,10 +6,10 @@ from datetime import datetime
 st.markdown("""
 <style>
 .big-font {
-    font-size: 18vw !important;  /* Viewport width percentage */
+    font-size: 20vw !important;  /* Viewport width percentage */
     text-align: center;
-    white-space: nowrap;
     margin-top: 5vh;
+    white-space: nowrap;
     line-height: 0.9;
 }
 .date-font {
