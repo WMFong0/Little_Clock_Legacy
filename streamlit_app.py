@@ -3,16 +3,22 @@ import time
 from datetime import datetime
 import pytz
 
-# Custom CSS styling with scroll prevention
-st.markdown("""
+# Initialize session state for theme if it doesn't exist
+if 'dark_mode' not in st.session_state:
+    st.session_state.dark_mode = False
+
+# Custom CSS styling with theme switching
+st.markdown(f"""
 <style>
-html, body {
+html, body {{
     overflow: hidden !important;
     height: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-}
-.time-container {
+    background-color: {'#121212' if st.session_state.dark_mode else '#ffffff'};
+    color: {'white' if st.session_state.dark_mode else 'black'};
+}}
+.time-container {{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,25 +28,42 @@ html, body {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
-}
-.big-time {
+}}
+.big-time {{
     font-size: 20vw !important;
     font-family: monospace;
     line-height: 1;
     white-space: nowrap;
     margin: 0;
     padding: 0;
-}
-.date-header {
+    color: {'white' if st.session_state.dark_mode else 'black'};
+}}
+.date-header {{
     font-size: 3vw !important;
     margin-bottom: 2vh;
-    color: #666;
-}
-.timezone-label {
+    color: {'#ccc' if st.session_state.dark_mode else '#666'};
+}}
+.timezone-label {{
     font-size: 2vw !important;
-    color: #888;
     margin-top: 1vh;
-}
+    color: {'#aaa' if st.session_state.dark_mode else '#888'};
+}}
+.theme-toggle {{
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 1000 !important;
+    background: {'#333' if st.session_state.dark_mode else '#eee'};
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    border: none !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}}
 </style>
 """, unsafe_allow_html=True)
 
@@ -54,6 +77,12 @@ header {visibility: hidden;}
 </style>
 """, unsafe_allow_html=True)
 
+# Theme toggle button
+if st.button("🌓", key="theme_toggle", help="Toggle dark mode"):
+    st.session_state.dark_mode = not st.session_state.dark_mode
+    st.experimental_rerun()
+
+# Clock elements
 clock_container = st.empty()
 hk_tz = pytz.timezone('Asia/Hong_Kong')
 
@@ -69,7 +98,6 @@ while True:
     # Update date only at exactly 00:00:00
     if current_time == "00:00:00":
         current_date = now.strftime("%A, %B %d, %Y")
-        # Small delay to ensure we don't update multiple times in the same second
         time.sleep(1)
     
     clock_container.markdown(
