@@ -7,6 +7,7 @@ import pytz
 st.markdown("""
 <style>
 html, body {
+    #Main-Menu 
     overflow: hidden !important;
     height: 100% !important;
     margin: 0 !important;
@@ -41,6 +42,13 @@ html, body {
     color: #888;
     margin-top: 1vh;
 }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<style>
+#MainMenu {visibility: hidden;}
+.stApp {padding: 0;}
 </style>
 """, unsafe_allow_html=True)
 
