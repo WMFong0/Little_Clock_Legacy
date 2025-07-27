@@ -7,7 +7,6 @@ import pytz
 st.markdown("""
 <style>
 html, body {
-    #Main-Menu 
     overflow: hidden !important;
     height: 100% !important;
     margin: 0 !important;
