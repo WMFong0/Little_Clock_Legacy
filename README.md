@@ -1,5 +1,3 @@
 # Little Live Clock
 
-Click Open in Streamlit to try it out
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://little-live-clock-hong-kong.streamlit.app/)
+As the name of the branch induced, this is a non-GUI version. Meaning that things, will be flipped upside down in here. Structure will appeared in a totally different way.
