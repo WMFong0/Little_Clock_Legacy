@@ -47,7 +47,7 @@ html, body {
 
 st.markdown("""
 <style>
-#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
 .stApp {padding: 0;}
 </style>
 """, unsafe_allow_html=True)
