@@ -47,6 +47,7 @@ html, body {
 
 st.markdown("""
 <style>
+header {visibility: hidden;}
 footer {visibility: hidden;}
 .stApp {padding: 0;}
 </style>
