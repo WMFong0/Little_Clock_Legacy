@@ -41,14 +41,11 @@ html, body {
     color: #888;
     margin-top: 1vh;
 }
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<style>
-header {visibility: hidden;}
-footer {visibility: hidden;}
-.stApp {padding: 0;}
+.affiliate-label {
+    font-size: 3vw !important;
+    margin-bottom: 1vh;
+    color: #777;
+}
 </style>
 """, unsafe_allow_html=True)
 
