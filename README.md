@@ -1,4 +1,4 @@
-# Little Live Clock
+# Python Little Live Clock
 
 Click Open in Streamlit to try it out
 
